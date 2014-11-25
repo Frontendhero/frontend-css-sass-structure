@@ -1,0 +1,69 @@
+.sidebar {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: $white;
+  background-color: $red;
+  @include transition(ease-in-out width, .5s);
+  .mobile_collapse {
+    width: 50px; height: 50px;
+    position: absolute;
+    top: 0; right: -50px;
+    display: block;
+    @include transition(ease-in-out right, .5s);
+    button {
+      width: 50px;
+      .fa {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        display: block;
+        color: $red;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+  }
+  .show_mobile_nav & {
+    padding-top: 70px;
+    width: $sidebar_width;
+    .mobile_collapse {
+      right: 0;
+    }
+  }
+  nav {
+    padding: 1rem;
+    overflow: hidden;
+    width: 0;
+    .show_mobile_nav & {
+      width: 100%;
+    }
+    ul {
+      margin: 0 0 0 0;
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      line-height: 2.4;
+      a {
+        color: $white;
+        text-decoration: none;
+        transition: 0.5s ease-in-out;
+        display: none;
+        padding-left: 2rem;
+        line-height: 3;
+        @include transition(ease-in-out right, .5s);
+        .show_mobile_nav & {
+          display: block;
+          text-align: center;
+          padding-left: 0;
+        }
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}

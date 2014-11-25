@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body,html{
+  margin: 0;
+  padding: 0;
+}
+html {
+  line-height: 1.48;
+  background: $grey;
+}
+body {
+  color: $black;
+  transition: all .4s .3s ease-in;
+  font-family: "Merriweather", serif;
+  font-size: 1.2rem;
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
+  }
+}
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,900italic,300italic,300,400italic,700,700italic,900);
