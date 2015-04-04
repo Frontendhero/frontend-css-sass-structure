@@ -1,8 +1,5 @@
-
-
-
-
-
+// Vendor
+@import 'vendor/_normalize.scss';
 
 // Mixins
 @import 'mixins/_position.scss';
@@ -31,10 +28,6 @@
 @import 'pages/_homepage.scss';
 @import 'pages/_contactpage.scss';
 @import 'pages/_aboutpage.scss';
-
-// Vendor
-@import 'vendor/_normalize.scss';
-
 
 
 
